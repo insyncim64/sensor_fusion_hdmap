@@ -46,3 +46,20 @@ Companies:
     - 80% - +/-5cm
     - How to use LiDAR
 C/C++
+
+HD Map
+- The importance of HD Map in Autonoumous Driving
+    - From cloud platform perspective, simulation system can not work without HD map. The goal of a simulation system is to reconstruct real roads, traffic and environment. And it is used for training algorithms. On the other hand, HD Map in the cloud can act as a data source for cars in the road. It supports autonomous driving mainling in four aspects, localization, perception, decision and planning.
+    - Localization: it is known that in combination of GPS, IMU, current map is working perfectly for cars. However, current accuracy of localization can not meet the requirement for localization in autonomous driving. Different sensors are used for percept and localize a car. A quick solution is to have a map which contains crucial information for driving. And it should as detailed as possible. Then a low cost autonomous driving solution can be proposed. A single lens camera can be used to capture image. Lanes can be used to compare with the lane information in the HD map to determine the location horizontally. Traffic light, light and lighting pole can be used for localization vertically.
+    - Perception: At first, sensors can percept the environment up to 1km away. HD Map can provide you information much more far away from it. Secondly, through comparison between the information which is captured actively from sensors and HD map, it helps to detect objects, like vehcile and pedestrian. Moreover, information from HD map can provide semantic meaning. For example, different kinds of traffic light system have different number of lights. If it knows that how many lights it should detect and percept. It will help a lot to design perception algorithms.
+    - Decision and Planning: Including the realtime update of map, it helps to plan efficiently.
+    - HD Map can help to reduce number of sensors. A feasible solution can be hardly proposed without HD map.
+- Process to create an HD map
+    - Data sourcing
+        
+    - Pre-Processing
+    - Manual Verification
+    - Release
+Usage of Map which is collected by Baidu
+    - HDMap
+    - ADAS MAP
