@@ -1,11 +1,3 @@
-As Active Safety Map & Cloud System Developer, you will be part of a team working with map data needs for a fused environmental perception, as well as a solution for probe sourcing sensor data for keeping a cloud based map continuously up to date and reliable enough to be used for autonomous driving.
-Main responsibilities
-
-One of your responsibilities will be to design the system solution as well as writing and releasing requirements and documentation, supporting the development in these areas. In this work, you need to have a close collaboration with the Function Owners within Active Safety as well as other stakeholders within Volvo Cars globally, such as the Infotainment/Navigation area, the team within Volvo Cars IT working with the cloud development and the Sensor Performance team.
-
--Further, as a Senior Developer, you will collaborate closely with our map suppliers, as well as our SW Partner Zenuity, in all phases of the Active Safety and Autonomous Drive projects. You will also work to define strategies and new technology steps / advanced engineering within the area together with the Map & Cloud Team Leader.
-
-
 Basic:
 What is sensor fusion?
 - Many sensors are equipped in a car. Integrate different cameras, radars can help to achieve a acurate status of a car in the environment.
