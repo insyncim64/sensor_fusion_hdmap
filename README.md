@@ -56,10 +56,17 @@ HD Map
     - HD Map can help to reduce number of sensors. A feasible solution can be hardly proposed without HD map.
 - Process to create an HD map
     - Data sourcing
-        
+        - Image, Point Cloud, GPS Track
     - Pre-Processing
+        - Sensor fusion which combines information from GPS, IMU, LiDAR, and camera
+        - Deep learning for segmentation and detection
     - Manual Verification
+        - human being is needed to increase accuracy
     - Release
-Usage of Map which is collected by Baidu
-    - HDMap
-    - ADAS MAP
+        - HD Map
+        - ADAS Map
+        - Infotainment map
+    - Update
+        - A update cycle exists between cloud of map provider and car. Here is the [update cylce](https://mp.weixin.qq.com/s?__biz=MzI1NjkxOTMyNQ==&mid=100000179&idx=1&sn=63bdf976825c2770ef974a7c11ed8f6e&chksm=6a1e13c15d699ad78c84170c8f447e456742b608efadca25cf37001027c6f7ba6a16179dd72b&scene=20&key=ffd6e7826d53df79f8fa0d6d3a605b69eab835c3a7f6e9b417f0e172bb307a57c80de27a35ff2d4a84893b42496a1c745c1526c69788e175961ee4e8a14030b50cf6cf25047043361bedc1b89ae458ba&ascene=0&uin=MTE2NjQzMjMyMA%3D%3D&devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.12.6+build(16G29)&version=12020110&nettype=WIFI&lang=zh_CN&fontScale=100&pass_ticket=IYK%2FI9o2lXOo4hCjSwjLG0LZNdIURijz4X9oUzAknRcwcU2FAcspk%2BmQy6fFfhp0## "update cycle") of ApolloAuto HDMap from Baidu.
+![](MapUpdateCycle.png)
+    
