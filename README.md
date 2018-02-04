@@ -1,7 +1,8 @@
 Basic:
 What is sensor fusion?
 - Many sensors are equipped in a car. Integrate different cameras, radars can help to achieve a acurate status of a car in the environment.
-- https://static.leiphone.com/uploads/new/article/740_740/201708/59a669c009294.jpg?imageMogr2/format/jpg/quality/90
+
+![](https://static.leiphone.com/uploads/new/article/740_740/201708/59a669c009294.jpg?imageMogr2/format/jpg/quality/90)
 - However, every sensor has its pros and cons. e.g. take two sensors in a cellphone, accerometer is not accurate while error will not be accumulated. gyro is accurate in returning the changes, while errors will be accumulated.
 - Kalman filter is a classic tool to do sensor fusion.
 What is high defition map?
@@ -46,7 +47,7 @@ HD Map
     - Perception: At first, sensors can percept the environment up to 1km away. HD Map can provide you information much more far away from it. Secondly, through comparison between the information which is captured actively from sensors and HD map, it helps to detect objects, like vehcile and pedestrian. To aggregate different regions which are needed by perception module, HD Map can provide region of interest(ROI). Moreover, information from HD map can provide semantic meaning. For example, different kinds of traffic light system have different number of lights. If it knows that how many lights it should detect and percept. It will help a lot to design perception algorithms. 
     - Decision and Planning: Including the realtime update of map, it helps to plan efficiently.
     - HD Map can help to reduce number of sensors. A feasible solution can be hardly proposed without HD map.
-- Process to create an HD map
+- Main procedure to create an HD map
     - Data sourcing
         - Image, Point Cloud, GPS Track
     - Pre-Processing
@@ -55,10 +56,31 @@ HD Map
     - Manual Verification
         - human being is needed to increase accuracy
     - Release
-        - HD Map
-        - ADAS Map
-        - Infotainment map
+        - Usage of HD map
+            - HD Map, ADAS Map Infotainment map
+        - Format of HD map, openDrive
     - Update
         - A update cycle exists between cloud of map provider and car. Here is the [update cylce](https://mp.weixin.qq.com/s?__biz=MzI1NjkxOTMyNQ==&mid=100000179&idx=1&sn=63bdf976825c2770ef974a7c11ed8f6e&chksm=6a1e13c15d699ad78c84170c8f447e456742b608efadca25cf37001027c6f7ba6a16179dd72b&scene=20&key=ffd6e7826d53df79f8fa0d6d3a605b69eab835c3a7f6e9b417f0e172bb307a57c80de27a35ff2d4a84893b42496a1c745c1526c69788e175961ee4e8a14030b50cf6cf25047043361bedc1b89ae458ba&ascene=0&uin=MTE2NjQzMjMyMA%3D%3D&devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.12.6+build(16G29)&version=12020110&nettype=WIFI&lang=zh_CN&fontScale=100&pass_ticket=IYK%2FI9o2lXOo4hCjSwjLG0LZNdIURijz4X9oUzAknRcwcU2FAcspk%2BmQy6fFfhp0## "update cycle") of ApolloAuto HDMap from Baidu.
 ![](MapUpdateCycle.png)
+- Sensor fusion in the cloud
+    Point cloud from LiDAR is pre-processed in the car, and post-processed and fused in the cloud, creating a continuously updated 3D map for SLAM. 
+    - Basic theories:
+        - Coordination systems: Ego vehicle reference frame, Homogeneous coordinates
+        - Sensor fusion algorithms:
+            - *Bayesian filtering*
+            - *Kalman Filter and Extended Kalman Filter*
+            - *Particle Filter*
+        - Clustering algorithm
+            - K-means
+            - Single Linkage Clustering
+    - Methods for map extraction from point cloud
+        - Dense reconstruction algorithms: 
+            Dense reconstruction is widely used for 3D printing, face recognition. A low cost solution(KinectFusion) which uses RGBD camera was proposed in 2013. 
+        - Sparce reconstruction algorithms:
+        - Procedures for map extraction:
+            - Compact map representation
+    - Localization algorithm
+
+
+
     
